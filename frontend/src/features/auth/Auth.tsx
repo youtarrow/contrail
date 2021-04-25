@@ -58,6 +58,7 @@ const Auth: React.FC = () => {
           onChange={handleInputChange}
         />
       </div>
+      <br />
       <div>
         <TextField
           InputLabelProps={{
