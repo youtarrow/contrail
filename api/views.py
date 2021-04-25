@@ -23,6 +23,10 @@ class LoginUserView(generics.RetrieveUpdateAPIView):
     def get_object(self):
         return self.request.user
 
+    def update(self, request, *args, **kwargs):
+        response = {'message': 'PUTメソッドは許可されていません'}
+        return Response(response, status=status.HTTP_400_BAD_REQUEST)
+
 
 class ProfileViewSet(viewsets.ModelViewSet):
     queryset = Profile.objects.all()
