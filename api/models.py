@@ -29,7 +29,7 @@ class Category(models.Model):
 class Article(models.Model):
     id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
     title = models.CharField(max_length=30)
-    content = models.CharField(max_length=1000)
+    content = models.TextField(max_length=1000)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='owner')
     created_at = models.DateTimeField(auto_now_add=True)
