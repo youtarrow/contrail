@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="" width="600">
+  <img src="https://user-images.githubusercontent.com/11171872/116082630-9781a400-a6d6-11eb-86a8-998f1d94cf94.gif" width="600">
 </div>
 
 <h1 align="center">Contrail</h1>
