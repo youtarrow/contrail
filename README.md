@@ -15,7 +15,7 @@
     <img src="https://user-images.githubusercontent.com/11171872/113247805-b159e200-92f6-11eb-86c9-c11d4c5600e7.png" height="90">
   </a>&nbsp;
   <a href="https://www.django-rest-framework.org/">
-    <img src="https://user-images.githubusercontent.com/11171872/116033756-f1657800-a69c-11eb-9e7a-827f31581540.png" height="90">
+    <img src="https://user-images.githubusercontent.com/11171872/116034047-89fbf800-a69d-11eb-8199-2b7dedf6b017.png" height="90">
   </a>&nbsp;
   <a href="https://aws.amazon.com/ec2/">
     <img src="https://user-images.githubusercontent.com/11171872/116032369-83b84c80-a69a-11eb-9b83-089d1d166e71.png" height="90">
