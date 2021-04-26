@@ -85,10 +85,10 @@ const App: React.FC = () => {
       <div className={styles.app__root}>
         <Grid container>
           <Grid item xs={4}>
-            <PolymerIcon className={classes.icon} />
+            Contrail
           </Grid>
           <Grid item xs={4}>
-            <h1>Scrum Article Board</h1>
+            <h1>Article List</h1>
           </Grid>
           <Grid item xs={4}>
             <div className={styles.app__logout}>

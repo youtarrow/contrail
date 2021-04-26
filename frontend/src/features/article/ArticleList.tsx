@@ -111,7 +111,7 @@ const ArticleList: React.FC = () => {
           dispatch(selectArticle(initialState.selectedArticle));
         }}
       >
-        新規投稿
+        New Article
       </Button>
       {articles[0]?.title && (
         <Table size="small" className={classes.table}>
