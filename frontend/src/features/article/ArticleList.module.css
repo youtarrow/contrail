@@ -1,4 +1,4 @@
-.tasklist__icon {
+.articlelist__icon {
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -7,7 +7,7 @@
   margin-top: 10px;
   color: dimgray;
 }
-.tasklist__hover {
+.articlelist__hover {
   cursor: pointer;
 }
 button:disabled {

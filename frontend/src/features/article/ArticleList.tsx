@@ -5,6 +5,17 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import DeleteOutlineOutlinedIcon from "@material-ui/icons/DeleteOutlineOutlined";
 import EditOutlinedIcon from "@material-ui/icons/EditOutlined";
+import {
+  Button,
+  Avatar,
+  Badge,
+  Table,
+  TableHead,
+  TableCell,
+  TableRow,
+  TableBody,
+  TableSortLabel,
+} from "@material-ui/core";
 
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -80,7 +91,102 @@ const ArticleList: React.FC = () => {
     return loginProfile?.img !== null ? loginProfile?.img : undefined;
   };
 
-  return <div></div>;
+  return (
+    <>
+      <Button
+        className={classes.button}
+        variant="contained"
+        color="primary"
+        size="small"
+        startIcon={<AddCircleOutlineIcon />}
+        onClick={() => {
+          dispatch(
+            editArticle({
+              id: 0,
+              title: "",
+              content: "",
+              category: 1,
+            })
+          );
+          dispatch(selectArticle(initialState.selectedArticle));
+        }}
+      >
+        新規投稿
+      </Button>
+      {articles[0]?.title && (
+        <Table size="small" className={classes.table}>
+          <TableHead>
+            <TableRow>
+              {columns.map(
+                (column, colIndex) =>
+                  (column === "title" ||
+                    column === "category" ||
+                    column === "owner") && (
+                    <TableCell align="center" key={colIndex}>
+                      <TableSortLabel
+                        active={state.activeKey === column}
+                        direction={state.order}
+                        onClick={() => handleClickSortColumn(column)}
+                      >
+                        <strong>{column}</strong>
+                      </TableSortLabel>
+                    </TableCell>
+                  )
+              )}
+              <TableCell></TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {state.rows.map((row, rowIndex) => (
+              <TableRow hover key={rowIndex}>
+                {Object.keys(row).map(
+                  (key, colIndex) =>
+                    (key === "title" || key === "category_item") && (
+                      <TableCell
+                        align="center"
+                        className={styles.articlelist__hover}
+                        key={`${rowIndex}+${colIndex}`}
+                        onClick={() => {
+                          dispatch(selectArticle(row));
+                          dispatch(editArticle(initialState.editedArticle));
+                        }}
+                      >
+                        {<span>{row[key]}</span>}
+                      </TableCell>
+                    )
+                )}
+                <TableCell>
+                  <Avatar
+                    className={classes.small}
+                    alt="owner"
+                    src={conditionalSrc(row["owner"])}
+                  />
+                </TableCell>
+                <TableCell align="center">
+                  <button
+                    className={styles.articlelist__icon}
+                    onClick={() => {
+                      dispatch(fetchAsyncDeleteArticle(row.id));
+                    }}
+                    disabled={row["owner"] !== loginUser.id}
+                  >
+                    <DeleteOutlineOutlinedIcon />
+                  </button>
+                  <button
+                    className={styles.articlelist__icon}
+                    onClick={() => dispatch(editArticle(row))}
+                    disabled={row["owner"] !== loginUser.id}
+                  >
+                    <EditOutlinedIcon />
+                  </button>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      )}
+    </>
+  );
 };
 
 export default ArticleList;
