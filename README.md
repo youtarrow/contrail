@@ -14,8 +14,8 @@
   <a href="https://material-ui.com/">
     <img src="https://user-images.githubusercontent.com/11171872/113247805-b159e200-92f6-11eb-86c9-c11d4c5600e7.png" height="90">
   </a>&nbsp;
-  <a href="https://docs.djangoproject.com/en/3.1/">
-    <img src="https://user-images.githubusercontent.com/11171872/113251358-1dd7df80-92fd-11eb-9167-a899ca7f96db.png" height="90">
+  <a href="https://www.django-rest-framework.org/">
+    <img src="https://user-images.githubusercontent.com/11171872/116033756-f1657800-a69c-11eb-9e7a-827f31581540.png" height="90">
   </a>&nbsp;
   <a href="https://aws.amazon.com/ec2/">
     <img src="https://user-images.githubusercontent.com/11171872/116032369-83b84c80-a69a-11eb-9b83-089d1d166e71.png" height="90">
@@ -28,7 +28,7 @@ https://xxxxxx
 
 ## :pencil2: Overview
 
-Create a Technical site with React and Django.
+Create a Technical site with React and Django REST API.
 
 ## :hammer: Requirement
 
@@ -36,7 +36,7 @@ Create a Technical site with React and Django.
 - React 17.0.1
 - TypeScript 4.2.3
 - Material UI
-- Django 3.1.7
+- Django REST framework
 - Python 3.7.5
 - Amazon EC2
 
