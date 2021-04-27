@@ -24,7 +24,7 @@
 
 ## :computer: URL
 
-https://xxxxxx
+Coming soon...
 
 ## :pencil2: Overview
 
